@@ -5,12 +5,7 @@
   .program__body
     .container
       h2.program__title Что тебя ждет на концентрате?
-      h3.program__subtitle
-        span Часть С. Разбор 35 задачи
-      span.program__descr
-        |Разберём основные типы задачи - около
-        =' '
-        strong 9 вторичных баллов
+
       //begin program__list
       .program__list.program-list
         //begin program-list__row
@@ -18,10 +13,9 @@
           .program-list__img
             img(src="assets/img/program-01.png" alt="picture")
           .program-list__text
-            .program-list__numb 001
-            h4.program-list__title Разбор механизма решения задачи на горение.
-            span Тонкости оформления, формулы.
-            span Лайфхаки по экономии времени.
+            .program-list__numb день 1
+            h4.program-list__title Уровень сложности Beginner
+            span Цитологические основы наследственности, гены, ДНК, хромосомы. Основные понятия, генетика пола. законы Менделя, решение 6-го тестового задания.
         //end program-list__row
 
         //begin program-list__row
@@ -29,9 +23,9 @@
           .program-list__img
             img(src="assets/img/program-02.png" alt="picture")
           .program-list__text
-            .program-list__numb 002
-            h4.program-list__title Разбор механизма решения задачи на доли.
-            span Формулы, оформление.
+            .program-list__numb день 2
+            h4.program-list__title Уровень сложности Medium
+            span Хромосомная теория Томаса Моргана, сцепленное наследование, нарушения сцепления, решение задания 22, решение задания 28 на сцепленное наследование.
         //end program-list__row
 
         //begin program-list__row
@@ -39,11 +33,47 @@
           .program-list__img
             img(src="assets/img/program-03.png" alt="picture")
           .program-list__text
-            .program-list__numb 003
-            h4.program-list__title Разбор усложнённых версий.
-            span На кислые соли и задачи с доп. условиями.
-            span
+            .program-list__numb день 3
+            h4.program-list__title Уровень сложности Hard
+            span Виды взаимодействия генов, решение самых сложных 28 задач
         //end program-list__row
       //end program__list
+
+      //begin program__footer
+      .program__footer.program-footer
+        .program-footer__header
+          h3.program-footer__title
+            | В конце курса ты
+            =' '
+            span научишься решать:
+
+        .program-footer__body
+          .program-footer__item
+            img(src="assets/img/smile-02.png" alt="picture")
+            strong 6 задание
+            br
+            | по законам Менделя
+            span (1 балл)
+
+          .program-footer__item
+            img(src="assets/img/smile-02.png" alt="picture")
+            strong 22 задание
+            br
+            |по хромосомным картам
+            span (2 балла)
+
+          .program-footer__item
+            img(src="assets/img/smile-02.png" alt="picture")
+            strong 28 задание,
+            =' '
+            |от которого хочется лечь на условие и плакать
+            span (3 балла)
+
+          .program-footer__item
+            img(src="assets/img/smile-02.png" alt="picture")
+            | Кто здесь самый
+            | сладкий пирожочек?
+            span (Конечно, ты)
+      //end program__footer
   //end program__body
 //end program

@@ -2,15 +2,17 @@
   position: relative;
   z-index: 1;
   margin-top: -200px;
-  background-image: url('../img/bg-teacher.png');
+  background-image: url('../img/bg-teacher-bg.png'), url('../img/bg-teacher.png');
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 50% 100px, 50% 0;
   background-size: cover;
 
   @include max(980) {
-    margin-top: -100px;
-    background-color: #ca8495;
-    background-image: none;
+    margin-top: -300px;
+    padding-top: 100px;
+    background-image: url('../img/bg-teacher-top.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
   }
   &::after {
     position: absolute;
@@ -25,25 +27,8 @@
     opacity: .3;
     background-image: url('../img/bg-teacher-03.png'), url('../img/bg-teacher-04.png');
     background-repeat: no-repeat;
-    background-position: 0 0, 100% 50px;
+    background-position: 0 100px, 100% 150px;
     background-size: auto, auto;
-
-    @include max(980) {
-      display: block;
-    }
-  }
-  &::before {
-    position: absolute;
-    top: -100px;
-    right: 0;
-    left: 0;
-    display: none;
-    width: 100%;
-    height: 100px;
-    content: '';
-    background-image: url('../img/bg-teacher-top.png');
-    background-repeat: no-repeat;
-    background-position: 50% 0;
 
     @include max(980) {
       display: block;
@@ -62,7 +47,9 @@
 }
 
 .teacher-banner {
-  width: 50%;
+  position: relative;
+  z-index: 1;
+  width: 51%;
   margin-left: auto;
 
   @include max(980) {
@@ -82,7 +69,7 @@
   line-height: 35px;
   display: block;
   margin-bottom: 25px;
-  color: #fff;
+  color: #1e1e1e;
 
   @include max(980) {
     text-align: center;
@@ -99,7 +86,7 @@
   line-height: 50px;
   max-width: 480px;
   margin-bottom: 35px;
-  color: #fff;
+  color: #1e1e1e;
 
   @include max(980) {
     text-align: center;
@@ -144,10 +131,20 @@
   line-height: 35px;
   padding-left: 20px;
   list-style-image: url('../img/ul.svg');
-  color: #fff;
+  color: #1e1e1e;
 
   @include max(550) {
     padding-left: 10px;
+  }
+
+  .frog {
+    display: inline-block;
+    padding-right: 45px;
+    background-image: url('../img/frog.png');
+    background-repeat: no-repeat;
+    background-position: 100% 5px;
+    background-size: contain;
+    background-size: 30px 26px;
   }
 
   strong {
@@ -156,6 +153,8 @@
 }
 
 .teacher__pic {
+  position: relative;
+  z-index: 1;
   display: none;
   width: 100%;
   background-repeat: no-repeat;
@@ -175,7 +174,6 @@
     width: calc(100% + 50px);
     margin-top: 30px;
     margin-left: -25px;
-    background-size: auto;
   }
 }
 

@@ -1,3 +1,30 @@
+.video {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 140px;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    background-image: url('../img/bg-video.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+
+    @include max(940) {
+      opacity: .5;
+      background-image: url('../img/bg-video-1.png'), url('../img/bg-video-2.png');
+      background-repeat: no-repeat, no-repeat;
+      background-position: 0 0, 100% 0;
+      background-size: auto, auto;
+    }
+  }
+}
+
 .video__title {
   font-family: $gilroy-bold;
   font-size: 40px;
