@@ -1,0 +1,214 @@
+.teacher {
+  position: relative;
+  z-index: 1;
+  margin-top: -200px;
+  background-image: url('../img/bg-teacher.png');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+
+  @include max(980) {
+    margin-top: -100px;
+    background-color: #ca8495;
+    background-image: none;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    margin: auto;
+    content: '';
+    pointer-events: none;
+    opacity: .3;
+    background-image: url('../img/bg-teacher-03.png'), url('../img/bg-teacher-04.png');
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% 50px;
+    background-size: auto, auto;
+
+    @include max(980) {
+      display: block;
+    }
+  }
+  &::before {
+    position: absolute;
+    top: -100px;
+    right: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100px;
+    content: '';
+    background-image: url('../img/bg-teacher-top.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+
+    @include max(980) {
+      display: block;
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 175px;
+    padding-bottom: 75px;
+
+    @include max(980) {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.teacher-banner {
+  width: 50%;
+  margin-left: auto;
+
+  @include max(980) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+.teacher-banner__subtitle {
+  font-family: $gilroy;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 35px;
+  display: block;
+  margin-bottom: 25px;
+  color: #fff;
+
+  @include max(980) {
+    text-align: center;
+  }
+  @include max(740) {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+}
+
+.teacher-banner__title {
+  font-family: $gilroy-bold;
+  font-size: 40px;
+  line-height: 50px;
+  max-width: 480px;
+  margin-bottom: 35px;
+  color: #fff;
+
+  @include max(980) {
+    text-align: center;
+  }
+  @include max(740) {
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 35px;
+  }
+  @include max(550) {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  span {
+    position: relative;
+    display: inline-block;
+    padding-right: 55px;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      content: '';
+      background-image: url('../img/100.png');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+    }
+  }
+}
+
+.teacher-banner__list {
+  margin: 0;
+  padding: 0 0 0 30px;
+}
+
+.teacher-banner__item {
+  font-family: $gilroy;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 35px;
+  padding-left: 20px;
+  list-style-image: url('../img/ul.svg');
+  color: #fff;
+
+  @include max(550) {
+    padding-left: 10px;
+  }
+
+  strong {
+    font-family: $gilroy-bold;
+  }
+}
+
+.teacher__pic {
+  display: none;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: contain;
+
+  @include max(980) {
+    display: block;
+    height: 500px;
+    background-image: url('../img/teacher.png');
+  }
+  @include max(740) {
+    height: 310px;
+    background-image: url('../img/teacher-mobile.png');
+  }
+  @include max(550) {
+    width: calc(100% + 50px);
+    margin-top: 30px;
+    margin-left: -25px;
+    background-size: auto;
+  }
+}
+
+.teacher-test {
+  .teacher-banner__title {
+    font-size: 35px;
+    line-height: 45px;
+    max-width: 100%;
+    margin-bottom: 50px;
+    letter-spacing: -.1px;
+
+    @include max(740) {
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 35px;
+    }
+    @include max(550) {
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+  }
+  .teacher-banner__list {
+    margin-bottom: 60px;
+  }
+  .teacher-banner__btn {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 35px;
+    span {
+      @include max(550) {
+        display: none;
+      }
+    }
+  }
+}

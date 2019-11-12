@@ -1,0 +1,219 @@
+.top {
+  position: relative;
+  background-image: url('../img/bg-top-2.png'),
+  url('../img/bg-top.jpg');
+  background-repeat: repeat, no-repeat;
+  background-position: 50% 0, 50% 100%;
+  background-size: auto, cover;
+
+  @include max(980) {
+    background-image: url('../img/bg-top--mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: cover;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    margin: auto;
+    content: '';
+    pointer-events: none;
+    opacity: .3;
+    background-image: url('../img/bg-top-3.png'), url('../img/bg-top-4.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 0, 100% 0;
+    background-size: auto, auto;
+
+    @include max(980) {
+      display: block;
+    }
+  }
+  .container {
+    padding-top: 145px;
+    padding-bottom: 250px;
+
+    @include max(980) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.top-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include max(740) {
+    align-items: center;
+  }
+}
+
+.top-banner__header {
+  font-family: $gilroy;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 35px;
+  display: inline-block;
+  margin-bottom: 35px;
+  color: #fff;
+
+  @include max(740) {
+    font-size: 20px;
+    text-align: center;
+  }
+  strong {
+    font-family: $gilroy-bold;
+  }
+}
+
+.top-banner__title-wrap {
+  position: relative;
+  margin-bottom: 50px;
+  padding-bottom: 18px;
+  &::before {
+    position: absolute;
+    top: 30px;
+    left: -25px;
+    width: 358px;
+    height: 101px;
+    content: '';
+    background-image: url('../img/bg-top-banner.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @include max(740) {
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+    @include max(550) {
+      right: 0;
+      left: 0;
+      width: 100%;
+      max-width: 350px;
+      margin: auto;
+      background-size: contain;
+    }
+  }
+}
+
+.top-banner__title {
+  font-family: $gilroy-bold;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1;
+  position: relative;
+  color: #fff;
+
+  @include max(740) {
+    text-align: center;
+  }
+  @include max(550) {
+    font-size: 35px;
+  }
+  span {
+    font-family: $gilroy-blackitalic;
+    font-size: 40px;
+    font-style: italic;
+    line-height: 1;
+    display: block;
+    padding-top: 5px;
+    color: #fefefe;
+
+    @include max(740) {
+      text-align: center;
+    }
+    @include max(550) {
+      font-size: 30px;
+    }
+  }
+}
+
+.top-banner__descr {
+  font-family: $gilroy;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 40px;
+  margin-bottom: 40px;
+  color: #fff;
+
+  @include max(980) {
+    font-size: 24px;
+  }
+  @include max(740) {
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  span {
+    font-family: $gilroy-bold;
+    position: relative;
+    display: inline-block;
+    padding-right: 80px;
+    background-image: url('../img/smiles.png');
+    background-repeat: no-repeat;
+    background-position: 100% 3px;
+    background-size: 65px 30px;
+
+    @include max(740) {
+      display: block;
+      width: 220px;
+      margin: 0 auto -30px;
+      padding-right: 0;
+      padding-bottom: 40px;
+      background-position: 50% 100%;
+    }
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: -5px;
+      width: 220px;
+      height: 10px;
+      content: '';
+      background-image: url('../img/top-underline.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-size: contain;
+
+      @include max(740) {
+        bottom: 40px;
+        left: 20px;
+        width: 180px;
+      }
+    }
+  }
+}
+
+.top-banner__under-descr {
+  font-family: $gilroy;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 35px;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #fff;
+
+  @include max(740) {
+    text-align: center;
+  }
+  @include max(550) {
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+}
+
+.top-banner__btn {
+  width: 100%;
+  max-width: 500px;
+
+  @include max(375) {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}

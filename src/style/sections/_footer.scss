@@ -1,0 +1,35 @@
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px 40px 20px 40px;
+  }
+}
+
+.footer__link {
+  font-family: $gilroy;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+  display: inline-block;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  text-decoration: none;
+  color: #969696;
+}
+
+.footer__link--copyright {
+  margin-right: auto;
+
+  @include max(980) {
+    margin-right: 0;
+  }
+}

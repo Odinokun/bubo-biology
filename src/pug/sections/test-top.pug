@@ -1,0 +1,33 @@
+//begin test-top
+.test-top
+  .container
+    //begin test-banner
+    .test-top__banner.test-banner
+      span.test-banner__header
+        | Пройди интерактивный тест за
+        =' '
+        strong 15 минут
+        br
+        | и узнай, сколько баллов получишь
+      .test-banner__title-wrap
+        h2.test-banner__title
+          |по химии на ЕГЭ-2020
+      .test-banner__descr
+        span В конце теста ты:
+
+      ul.test-banner__list
+        li.test-banner__item Узнаешь, на сколько баллов готов к ЕГЭ
+        li.test-banner__item Выявишь свои слабые места
+        li.test-banner__item Поймешь, как увеличить свой результат на экзамене
+
+      a(href="#").btn.test-banner__btn
+        |Пройти тест
+        =' '
+        span и узнать, на сколько баллов ты знаешь предмет
+    //end test-banner
+
+    //begin test-decor
+    .test-decor
+      img(src="assets/img/test-list.png" alt="picture")
+    //end test-decor
+//end test-top
